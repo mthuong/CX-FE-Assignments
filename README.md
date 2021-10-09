@@ -1,9 +1,4 @@
-# Skedulo CX FE Assignment
-
-## Pre-Requisites
-
-- Node
-- Npm
+# Skedulo CX FE Assignments
 
 ## Installation Instructions
 
@@ -12,10 +7,6 @@
 ## Running the App
 
 - Run: `yarn start`
-
-## Testing the App
-
-- Run: `yarn test`
 
 ## Overview
 
@@ -28,3 +19,11 @@ Once you have completed all exercises it would be great to see a readme that con
 - Question 3 - Responsive CSS design
 
 Good luck! And if you have any questions, don't hesitate to contact your hiring manager.
+
+## What we're looking for ?
+
+The purpose of the test is not only to make the solution workable, but also it has very well documented and structured code, as it serves as an example of how serious the developer is to push the team to write quality code.
+
+- Need to code best practices and code design.
+- **_You should use only plain HTML, CSS and Javascript, NO 3rd party libraries, only Bootstrap & React are allowed._**
+- Main code function is one big function, it needs to be split to be more readable and maintainable.
