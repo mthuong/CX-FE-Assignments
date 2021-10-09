@@ -1,0 +1,30 @@
+@import "variables";
+
+html {
+  font-size: 16px;
+}
+
+header {
+  background-color: $color_blue;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .question {
+    display: flex;
+    cursor: pointer;
+    div {
+      margin-right: 1rem;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.page {
+  padding: 1rem;
+}
