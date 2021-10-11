@@ -1,6 +1,6 @@
 # Question 3
 
-## In this question, we require a page to display Github users as a list of cards. When we click on one card, it displays full details of user and user's projects. When we click on one card, it display a full details of user and user's projects.
+## In this question, we require a page to display Github users as a list of cards. When we click on one card, it displays full details of user and user's projects.
 
 ### Some must have functionality includes:
 
