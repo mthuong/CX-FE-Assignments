@@ -1,6 +1,6 @@
 # Question 2
 
-## In this question, we want you to a function that union all overlapping items and produce an array of non overlapping items and unittest for it.
+## In this question, we want you to do a function that unions all overlapping items and produces an array of non-overlapping items, this question requires the unit test.
 
 For example:
 
