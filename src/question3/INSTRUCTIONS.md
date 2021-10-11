@@ -1,10 +1,10 @@
 # Question 3
 
-## In this question, we want a build a pages list number of Github users, they are displayed as list cards. When we click on one card, it display a full details of user and user's projects.
+## In this question, we require a page to display Github users as a list of cards. When we click on one card, it displays full details of user and user's projects. When we click on one card, it display a full details of user and user's projects.
 
 ### Some must have functionality includes:
 
-- List user display as Card in left column
+- The list of users is displayed as Card in left column
 - Main workspace will display selected user information and list projects.
 - The layout should always be the full width and height of the viewport, the whole page should never scroll.
 - Both main columns should scroll independently and only vertically when filled with content.
