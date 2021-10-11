@@ -4,7 +4,7 @@
 
 ### Some must have functionality includes:
 
-- List user display as Card in left column
+- The list of users is displayed as Card in left column
 - Main workspace will display selected user information and list projects.
 - The layout should always be the full width and height of the viewport, the whole page should never scroll.
 - Both main columns should scroll independently and only vertically when filled with content.
