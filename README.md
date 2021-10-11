@@ -25,5 +25,6 @@ Good luck! And if you have any questions, don't hesitate to contact your hiring 
 The purpose of the test is not only to make the solution workable, but also it has very well documented and structured code, as it serves as an example of how serious the developer is to push the team to write quality code.
 
 - Need to code best practices and code design.
-- **_You should use only plain HTML, CSS and Javascript, NO 3rd party libraries, only Bootstrap & React are allowed._**
+- **_You should use only plain HTML, CSS and Javascript, NO 3rd party libraries, only Bootstrap, React & Jest are allowed._**
 - Main code function is one big function, it needs to be split to be more readable and maintainable.
+- A readme that discusses your approach, anything that you think would be valuable for the reviewer to know
