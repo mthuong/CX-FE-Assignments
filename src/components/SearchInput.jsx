@@ -1,15 +1,17 @@
 import React from "react";
 
 function SearchInput(props) {
+  const { className, ...other } = props;
+  const classes = `input-group mb-3 ${className}`;
   return (
-    <div className="input-group mb-3">
+    <div className={classes}>
       <input
         type="text"
         className="form-control"
         placeholder="Username"
         aria-label="Username"
         aria-describedby="basic-addon1"
-        {...props}
+        {...other}
       />
     </div>
   );

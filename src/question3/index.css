@@ -1,0 +1,35 @@
+.search-input {
+  padding: 0 0.5rem 0 0.5rem;
+  /* flex: 0 1 auto; */
+}
+
+.page-content {
+  height: 100%;
+}
+
+.data-container {
+  height: 100%;
+
+  background-color: bisque;
+}
+
+@media (min-width: 576px) { 
+  .data-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.left-panel {
+  flex: 1 1 30%;
+  overflow-y: auto;
+
+  background-color: antiquewhite;
+}
+
+.right-panel {
+  display: flex;
+  flex-basis: 70%;
+  overflow-y: auto;
+  background-color: aquamarine;
+}

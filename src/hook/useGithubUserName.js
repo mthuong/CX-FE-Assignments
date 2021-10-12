@@ -14,7 +14,7 @@ export default function useGithubUserName(username) {
       })
   }, [username]);
 
-  return fullName;
+  return [fullName];
 }
 
 function getUser(username) {

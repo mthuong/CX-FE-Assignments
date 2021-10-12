@@ -1,16 +1,14 @@
-import React, { useCallback, useEffect, useState } from "react";
-import DataTable from "./components/DataTable";
-import { getProperty } from './components/functions';
-import SearchInput from './components/SearchInput';
-import UserName from './components/UserName';
-import environment from "./environment";
-import useDebounce from './hook/useDebounce';
+import React, { useCallback, useState } from "react";
+import DataTable from "../components/DataTable";
+import { getProperty } from '../components/functions';
+import SearchInput from '../components/SearchInput';
+import UserName from '../components/UserName';
+import useSearchUsers from '../hook/useSearchUsers';
 import './index.css';
 
 const Question1 = () => {
-  const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-  const [isLoading, setLoading] = useState(false);
+  const [users] = useSearchUsers(search);
 
   const columns = React.useMemo(
     () => [
@@ -61,30 +59,12 @@ const Question1 = () => {
     setSearch(e.target.value);
   }, []);
 
-  const debouncedSearchTerm = useDebounce(search, 300);
-
-  useEffect(
-    () => {
-      if (debouncedSearchTerm && debouncedSearchTerm.length >= 3) {
-        setLoading(true);
-        searchUsers(debouncedSearchTerm).then(results => {
-          setLoading(false);
-          setUsers(results["items"]);
-        });
-      } else {
-        setUsers([]);
-      }
-    },
-    [debouncedSearchTerm]
-  );
-
   return (
     <div>
       <SearchInput onChange={handleChange} />
       <DataTable
         data={users}
         columns={columns}
-        isLoading={isLoading}
         onRowClick={onRowClick}
         rowId="id"
         emptyMessage="No Data"
@@ -94,21 +74,3 @@ const Question1 = () => {
 };
 
 export default Question1;
-
-
-function searchUsers(search) {
-  const request = `${environment.BASE_URL}${environment.SEARCH_USERS}?q=${search}`;
-  return fetch(request, {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          return result;
-        }
-      )
-      .catch(error => {
-        console.error(error);
-        return {};
-      })
-}

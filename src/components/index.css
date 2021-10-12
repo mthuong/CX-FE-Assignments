@@ -1,0 +1,42 @@
+.table-row {
+  max-height: 100px;
+}
+
+.avatar {
+  max-height: 100px;
+}
+
+.user-active {
+  background-color: #349de3;
+  color: aliceblue;
+  border: 1px solid #349de3 !important;
+}
+
+.user-default {
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-default:hover {
+  box-shadow: 0 6px 8px 0 rgba(0.1,0.1,0.1,0.1),0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.user-default:focus {
+  outline: none;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.user-data {
+  word-wrap: anywhere;
+  margin: 0 0 0.5rem 0.5rem;
+}
