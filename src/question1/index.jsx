@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import DataTable from "./components/DataTable";
 import { getProperty } from './components/functions';
 import SearchInput from './components/SearchInput';
+import UserName from './components/UserName';
 import environment from "./environment";
 import useDebounce from './hook/useDebounce';
 import './index.css';
@@ -29,7 +30,13 @@ const Question1 = () => {
       },
       {
         field: "login",
-        headerName: "Username",
+        headerName: "Name",
+        renderCell: function cell({ field, value }) {
+          const username = getProperty(value, field);
+          return (
+            <UserName username={username} />
+          );
+        },
       },
       {
         field: "repos_url",
@@ -90,7 +97,7 @@ export default Question1;
 
 
 function searchUsers(search) {
-  const request = `${environment.BASE_URL}${environment.SEARCH_USER}?q=${search}`;
+  const request = `${environment.BASE_URL}${environment.SEARCH_USERS}?q=${search}`;
   return fetch(request, {
       method: "GET",
     })
