@@ -2,8 +2,8 @@
 
 ## Components structure
 
-- `components` store all component use in the search page
-- `hook` store the debounce hook to ensure that we don't execute fetch data too frequently
+- `question1/components` store all component use in the search page
+- `question1/hook` store the debounce hook to ensure that we don't execute fetch data too frequently
 
 ## My solution
 
@@ -16,3 +16,5 @@
 
 ## Demo
 
+
+https://user-images.githubusercontent.com/1086057/136891975-a70b828a-5d57-4c55-8331-657d9977f2f8.mov
