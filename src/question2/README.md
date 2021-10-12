@@ -22,3 +22,5 @@ Run `yarn test`
 - ✓ last item overlap previous items should return 1 item
 - ✓ items not overlap should the same items
 - ✓ items overlap head should merge and return 1 item
+
+<img width="947" alt="unit-test-result" src="https://user-images.githubusercontent.com/1086057/136908819-c46c08ad-f398-4323-8f71-81752670c953.png">
