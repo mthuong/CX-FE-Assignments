@@ -16,5 +16,4 @@ Search github users
 
 ## Demo
 
-
-https://user-images.githubusercontent.com/1086057/136891975-a70b828a-5d57-4c55-8331-657d9977f2f8.mov
+https://user-images.githubusercontent.com/1086057/136911495-eb2ec8d1-db23-49c0-92cc-e8dfa1b05e1c.mov
