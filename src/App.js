@@ -1,12 +1,14 @@
 import Markdown from 'markdown-to-jsx';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, useCallback } from "react";
 import './App.scss';
+
+const Question1 = React.lazy(() => import('./question1'));
 
 function App() {
 
   const [questionNumber, setQuestionNumber] = useState(1)
   const [question, setQuestion] = useState()
-
+  
   useEffect(
     () => {
       if (!!questionNumber) {
@@ -18,6 +20,20 @@ function App() {
     },
     [questionNumber],
   )
+
+  const renderPage = useCallback(() => {
+    switch (questionNumber) {
+      case 1:
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Question1 />
+          </Suspense>
+        )
+    
+      default:
+        return questionNumber;
+    }
+  }, [questionNumber]);
 
   return (
     <div>
@@ -31,6 +47,7 @@ function App() {
       </header>
 
       <div className="page">
+        {renderPage()}
         {question && <Markdown>{question}</Markdown>}
       </div>
 
