@@ -1,16 +1,23 @@
 import React, { useCallback, useState } from "react";
 import SearchInput from "../components/SearchInput";
 import useSearchUsers from "../hook/useSearchUsers";
-import "./index.css";
+import "./index.scss";
 import User from "../components/User";
+import useUserDetail from '../hook/useUserDetail';
+import useUserProjects from '../hook/useUserProjects';
+import UserDetail from '../components/UserDetail';
+import UserProjects from '../components/UserProjects';
 
-function Question3(props) {
-  const [search, setSearch] = useState("mth");
+function Question3() {
+  const [search, setSearch] = useState("");
   const [selectedUser, setSelectedUser] = useState();
   const [users] = useSearchUsers(search);
+  const [userDetail] = useUserDetail(selectedUser?.login);
+  const [projects] = useUserProjects(selectedUser?.login);
 
   const handleChange = useCallback((e) => {
     setSearch(e.target.value);
+    setSelectedUser();
   }, []);
 
   const userComponents = useCallback(() => {
@@ -34,10 +41,12 @@ function Question3(props) {
           {userComponents()}
         </div>
         <div className="right-panel">
+          <UserDetail user={userDetail} />
+          <UserProjects projects={projects} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Question3;
+export default React.memo(Question3);

@@ -1,0 +1,131 @@
+@import "../variables";
+
+.table-row {
+  max-height: 100px;
+}
+
+/* User */
+.circular {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circular img {
+  border-radius:50%;
+  transition: transform 0.5s ease;
+  transform: scale(1);
+}
+
+.circular img:hover {
+  transform: scale(1.1);
+} 
+
+.avatar {
+  aspect-ratio: 1;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.user-active {
+  background-color: $color_blue;
+  color: aliceblue;
+  border: 1px solid $color_blue !important;
+}
+
+.user-default {
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-default:hover {
+  box-shadow: 0 6px 8px 0 rgba(0.1,0.1,0.1,0.1),0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.user-default:focus {
+  outline: none;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.user-data {
+  word-wrap: anywhere;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+/* User Detail */
+.user-info-container {
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.user-info {
+  word-wrap: anywhere;
+  margin: 0;
+}
+
+.following {
+  display: block;
+}
+
+.icon {
+  width: fit-content;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.link {
+  color: black;
+  padding: 0; 
+
+  :hover {
+    color: $color_blue;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* Projects */
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.grid-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.25rem 0.25rem;
+
+  .project-container {
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}

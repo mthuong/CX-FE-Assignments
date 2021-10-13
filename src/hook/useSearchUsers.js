@@ -32,7 +32,14 @@ function searchUsers(search) {
   return fetch(request, {
       method: "GET",
     })
-      .then((res) => res.json())
+      .then(async (res) => {
+        if (res.status === 200) {
+          return res.json();
+        }
+  
+        const error = await res.json();
+        throw error;
+      })
       .then(
         (result) => {
           return result;

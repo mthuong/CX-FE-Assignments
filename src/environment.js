@@ -3,6 +3,7 @@ const environment = {
 
   SEARCH_USERS: "/search/users",
   USERS: "/users/",
+  PROJECTS: "/projects",
 }
 
 export default environment;

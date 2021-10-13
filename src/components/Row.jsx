@@ -1,6 +1,6 @@
 import React from "react";
 import Cell from "./Cell";
-import './index.css';
+import './index.scss';
 
 function Row(props) {
   const { row, columns, rowId, rowIndex, onRowClick } = props;

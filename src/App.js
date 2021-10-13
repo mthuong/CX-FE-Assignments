@@ -1,5 +1,5 @@
-import Markdown from 'markdown-to-jsx';
-import React, { useEffect, useState, Suspense, useCallback } from "react";
+// import Markdown from 'markdown-to-jsx';
+import React, { useState, Suspense, useCallback } from "react";
 import './App.scss';
 
 const Question1 = React.lazy(() => import('./question1'));
@@ -9,19 +9,19 @@ const Question3 = React.lazy(() => import('./question3'));
 function App() {
 
   const [questionNumber, setQuestionNumber] = useState(3)
-  const [question, setQuestion] = useState()
+  // const [question, setQuestion] = useState()
   
-  useEffect(
-    () => {
-      if (!!questionNumber) {
-        import(`./question${questionNumber}/INSTRUCTIONS.md`)
-          .then(response => fetch(response.default))
-          .then((response) => response.text())
-          .then(instructionData => setQuestion(instructionData))
-      }
-    },
-    [questionNumber],
-  )
+  // useEffect(
+  //   () => {
+  //     if (!!questionNumber) {
+  //       import(`./question${questionNumber}/INSTRUCTIONS.md`)
+  //         .then(response => fetch(response.default))
+  //         .then((response) => response.text())
+  //         .then(instructionData => setQuestion(instructionData))
+  //     }
+  //   },
+  //   [questionNumber],
+  // )
 
   const renderPage = useCallback(() => {
     switch (questionNumber) {
