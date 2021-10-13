@@ -7,6 +7,10 @@ function Project(props) {
     <div className="project-container">
       <h1>{project["name"]}</h1>
       <h6>{project["body"]}</h6>
+      <button type="button" class="btn btn-outline-primary" onClick={() => {
+        var win = window.open(project["html_url"], '_blank');
+        win.focus();
+      }}>Go Detail</button>
     </div>
   );
 }
