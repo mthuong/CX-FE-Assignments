@@ -9,3 +9,5 @@
   - Projects: display grid of user project cards
 
 ## Demo
+
+https://user-images.githubusercontent.com/1086057/137106799-4d7e1bb7-8e6d-45bb-a8fd-ef94149c16f9.mp4
